@@ -7,6 +7,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def show
+  end
+
   def create
     @topic = Topic.find params[:topic_id]
     @post = @topic.posts.create post_params
@@ -14,19 +17,22 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @topic = Topic.find params[:topic_id]
     @post = Post.find params[:id]
   end
 
   def update
     @post = Post.find params[:id]
+    @topic = Topic.find params[:topic_id]
     @post.update_attributes post_params
-    redirect_to posts_path
+    redirect_to topic_path(@topic)
   end
 
   def destroy
+    @topic = Topic.find params[:topic_id]
     @post = Post.find params[:id]
     @post.destroy
-    redirect_to posts_path
+    redirect_to @topic
   end
 
   def post_params
