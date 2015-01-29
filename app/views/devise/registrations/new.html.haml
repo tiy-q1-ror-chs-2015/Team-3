@@ -6,6 +6,10 @@
     %br/
     = f.email_field :email, autofocus: true
   .field
+    = f.label "Favorite_thing_about_Nick"
+    %br/
+    =f.select :nick_thing, options_for_select(User::NICK_OPTIONS, f.object.nick_thing), include_blank: "--- Select ---"
+  .field
     = f.label :password
     - if @validatable
       %em

@@ -1,3 +1,15 @@
+
 %h1 Hello World
 
 =link_to "Topics", topics_path
+
+%p
+  = link_to 'Users:', users_path
+  = User.count
+  registered
+
+.container
+  .row
+    .col-md-12.jumbotron.text-center
+      %h1 Nick Bucciarelli Forum
+
