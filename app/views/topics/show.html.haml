@@ -1,0 +1,13 @@
+= @topic.title
+%br
+%br
+= @topic.initial_post
+%br
+%br
+= link_to "Edit", edit_topic_path(@topic)
+= link_to "Delete", topic_path(@topic), method: :delete
+
+%br
+%br
+%br
+= link_to "Home", root_path
