@@ -15,11 +15,15 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'haml-rails'
 
+gem 'html2haml'
+
 gem 'bootstrap-sass'
 
 gem 'devise'
 
 gem 'nested_form'
+
+gem 'autoprefixer-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
