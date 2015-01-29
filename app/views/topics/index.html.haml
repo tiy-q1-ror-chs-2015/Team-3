@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-md-12.jumbotron
+      %h1 Topics
+.container
+  .row
+    .col-md-12.text-center
+      - @topics.each do |topic|
+        = link_to topic.title, topic_path(topic)
+        %br
+        %br
+        %br
+      = link_to "Home", root_path
+      = link_to "Add Topic", new_topic_path

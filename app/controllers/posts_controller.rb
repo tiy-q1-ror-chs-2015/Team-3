@@ -3,12 +3,14 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
   def new
+    @topic = Topic.find params[:topic_id]
     @post = Post.new
   end
 
   def create
-    @post = Post.create post_params
-    redirect_to posts_path
+    @topic = Topic.find params[:topic_id]
+    @post = @topic.posts.create post_params
+    redirect_to topic_path(@topic)
   end
 
   def edit
