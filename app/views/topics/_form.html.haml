@@ -1,0 +1,9 @@
+= form_for @topic do |f|
+  = f.label :title
+  = f.text_field :title
+  %br
+  = f.label :initial_post
+  = f.text_area :initial_post
+  %br
+  %br
+  = f.submit
