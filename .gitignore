@@ -6,7 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-/db/schema.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -16,3 +15,4 @@
 /log/*
 !/log/.keep
 /tmp
+/db/schema.rb
