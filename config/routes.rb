@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :topics do
-    resources :posts
+    resources :posts do
+      member do
+        post :create_comment
+        delete :destroy_comment
+      end
+    end
   end
   
   # Example of regular route:
