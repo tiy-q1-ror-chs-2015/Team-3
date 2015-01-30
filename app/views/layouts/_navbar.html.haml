@@ -7,7 +7,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"} Nick Bucciarelli Forum
+      %a.navbar-brand{:href => "/"} Nick Bucciarelli Forum
     #navbar.navbar-collapse.collapse
       %ul.nav.navbar-nav
         %li.dropdown
@@ -23,12 +23,12 @@
               %a{:href => "#"} Topic # 3
       %ul.nav.navbar-nav.navbar-right
         %li.active
-          %a{:href => "new_user_registration_path"}
+          %a{:href => "/users/sign_up"}
             Register
             %span.sr-only (current)
         %li
-          %a{:href => "../navbar-static-top/"} Login
+          %a{:href => "/users/sign_in"} Login
         %li
-          %a{:href => "../navbar-fixed-top/"} Sign Out
+          %a{:href => "/users/sign_out"} Sign Out
     / /.nav-collapse
   / /.container-fluid
