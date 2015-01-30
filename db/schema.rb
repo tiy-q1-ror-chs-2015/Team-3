@@ -11,13 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150129201227) do
+=======
+ActiveRecord::Schema.define(version: 20150129220813) do
+>>>>>>> b929928c5edc8c2bb2d8e23b62145d75b34a8f6d
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "title",      limit: 255
     t.text     "content",    limit: 65535
+    t.integer  "topic_id",   limit: 4
   end
 
   create_table "topics", force: :cascade do |t|
