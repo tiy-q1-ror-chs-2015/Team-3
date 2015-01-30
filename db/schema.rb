@@ -12,7 +12,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150130145046) do
+=======
+ActiveRecord::Schema.define(version: 20150130143648) do
+>>>>>>> 8d1e1977702f503ba406dabeaf6a71882f4ab091
 =======
 ActiveRecord::Schema.define(version: 20150130143554) do
 >>>>>>> 0aef06fa7699e9afa028a1975ef173ab6df52f45
@@ -32,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150130143554) do
     t.string   "title",      limit: 255
     t.text     "content",    limit: 65535
     t.integer  "topic_id",   limit: 4
+    t.integer  "user_id",    limit: 4
   end
 
   create_table "topics", force: :cascade do |t|
