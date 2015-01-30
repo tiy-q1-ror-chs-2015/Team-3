@@ -8,6 +8,10 @@ class PostsController < ApplicationController
   end
 
   def show
+    @topic = Topic.find params[:topic_id]
+    @post = Post.find params[:id]
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   def create
@@ -33,6 +37,26 @@ class PostsController < ApplicationController
     @post = Post.find params[:id]
     @post.destroy
     redirect_to @topic
+  end
+
+  def create_comment
+    @topic = Topic.find params[:topic_id]
+    @post = Post.find params[:id]
+    @comment = @post.comments.create comment_params
+    redirect_to topic_post_path(@topic, @post)
+  end
+
+  def destroy_comment
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to topic_post_path(@comment.commentable.topic, @comment.commentable)
+  end
+
+  def comment_params
+    params.require(:comment).permit(
+        :title,
+        :content,
+    )
   end
 
   def post_params

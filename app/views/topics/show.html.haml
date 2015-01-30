@@ -23,7 +23,7 @@
         %br
         .list-group-item.text-left
           %strong 
-            = post.title
+            = link_to post.title, topic_post_path(@topic, post)
           %br
           = post.content
           %br
