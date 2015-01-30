@@ -1,16 +1,15 @@
 .container
   .row
     .col-md-12.text-center
-      %form
-        = form_for @topic do |f|
-          .form-group
-            = f.label :title
-            = f.text_field :title
-          %br
-          .form-group
-            = f.label :initial_post
-            = f.text_area :initial_post
-          %br
-          %br
-          = f.submit
-      = link_to "Home", root_path
+      = form_for @topic do |f|
+        .form-group
+          = f.label :title
+          = f.text_field :title
+        %br
+        .form-group
+          = f.label :initial_post
+          = f.text_area :initial_post
+        %br
+        %br
+        = f.submit
+        = link_to "Home", root_path
