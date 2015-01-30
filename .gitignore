@@ -15,4 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+<<<<<<< HEAD
+
+=======
 /db/schema.rb
+>>>>>>> 8d1e1977702f503ba406dabeaf6a71882f4ab091
