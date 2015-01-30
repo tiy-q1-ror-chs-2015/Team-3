@@ -8,9 +8,13 @@
     = csrf_meta_tags
   %body
     = render 'layouts/navbar'
+    .container
+      .row
+        .col-md-12.text-center
+          %p.notice= notice
+          %p.alert= alert
     = yield
-    %p.notice= notice
-    %p.alert= alert
+
     = render 'layouts/footer'
 
 
