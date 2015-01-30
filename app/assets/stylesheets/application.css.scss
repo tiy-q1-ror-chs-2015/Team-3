@@ -1,0 +1,12 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+ 
+.jumbotron {
+  background-image: image-url("jumbotroncar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -200px;
+  text-align: center;
+  color: white;
+}

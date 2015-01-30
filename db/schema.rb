@@ -11,20 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150130145046) do
-=======
-
-ActiveRecord::Schema.define(version: 20150130145046) do
-
-ActiveRecord::Schema.define(version: 20150130143648) do
-
-ActiveRecord::Schema.define(version: 20150130143554) do
-
-ActiveRecord::Schema.define(version: 20150130143648) do
->>>>>>> 42ee94b964016040ee525c3927940c9ea4fa475e
-=======
 ActiveRecord::Schema.define(version: 20150130173207) do
->>>>>>> 3694e34d5051313f2f4be466d17d32bc7f6ad9a4
 
   create_table "comments", force: :cascade do |t|
     t.datetime "created_at",                     null: false
