@@ -1,8 +1,14 @@
-= form_for [@topic, @post] do |f|
-  = f.label :title
-  = f.text_field :title
-  %br
-  = f.label :content
-  = f.text_area :content
-  %br
-  = f.submit
+.container
+  .row
+    .col-md-12.text-center
+      = form_for [@topic, @post] do |f|
+        .form-group
+          = f.label :title
+          = f.text_field :title
+        %br
+        .form-group
+          = f.label :content
+          = f.text_area :content
+        %br
+        .btn
+          = f.submit
