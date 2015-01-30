@@ -1,0 +1,44 @@
+.container
+  .row
+    .col-md-12.text-center
+      %h2
+        = @post.title
+      %br
+      %br
+        = @post.content
+      %br
+      %br
+        = link_to "Edit", edit_topic_post_path(@topic, @post)
+        |
+        = link_to "Delete", topic_post_path(@topic, @post), method: :delete
+%br
+.container-fluid.text-center
+  .row
+    .col-md-12.text-center
+      Add Comment to Post: 
+      = form_for @comment, url: create_comment_topic_post_path(@topic, @post) do |f|
+        = f.label :title
+        = f.text_field :title
+        %br
+        = f.label :content
+        = f.text_area :content
+        %br
+        = f.submit
+%br
+.container-fluid.text-center
+  .row      
+    Comment List
+    %br
+    - @comments.each do |comment|
+      .col-md-12.text-center
+        %br
+        .list-group-item.text-left
+          %br
+          %strong
+            = comment.title
+          %br
+          = comment.content
+          %br
+          = link_to "Delete Comment", destroy_comment_topic_post_path(@post, comment), method: :delete
+
+
