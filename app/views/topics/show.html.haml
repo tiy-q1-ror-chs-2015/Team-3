@@ -13,16 +13,21 @@
       = link_to "Delete", topic_path(@topic), method: :delete
       |
       = link_to "Home", root_path
-
-.container
+%br
+.container-fluid.text-center
   .row      
     = link_to "Join the Conversation! Add a Post", new_topic_post_path(@topic)
     %br
     - @posts.each do |post|
-      .col-md-4
-        = post.title
-        = post.content
+      .col-md-12.text-center
         %br
-        = link_to "Edit", edit_topic_post_path(@topic, post)
-        = link_to "Delete", topic_post_path(@topic, post), method: :delete
+        .list-group-item.text-left
+          %strong 
+            = post.title
+          %br
+          = post.content
+          %br
+          = link_to "Edit", edit_topic_post_path(@topic, post)
+          = link_to "Delete", topic_post_path(@topic, post), method: :delete
+          %br
 
