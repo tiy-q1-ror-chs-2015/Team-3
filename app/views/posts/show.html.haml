@@ -39,6 +39,8 @@
           %br
           = comment.content
           %br
-          = link_to "Delete Comment", destroy_comment_topic_post_path(@post, comment), method: :delete
+          = comment.created_at.strftime("commented at %I:%M%p")
+          %br
+          = link_to "Delete", destroy_comment_topic_post_path(@post, comment), method: :delete
 
 
