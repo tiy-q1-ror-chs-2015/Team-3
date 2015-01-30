@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :user_posts
   has_many :comments, through: :user_comments
   has_many :user_comments
+  has_many :topics, through: :user_topics
+  has_many :user_topics
 
   NICK_OPTIONS = [
     "His winning smile",
