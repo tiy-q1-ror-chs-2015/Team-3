@@ -29,6 +29,6 @@
         %li
           %a{:href => "/users/sign_in"} Login
         %li
-          %a{:href => "/users/sign_out"} Sign Out
+          = link_to "Log Out", destroy_user_session_path, method: :delete
     / /.nav-collapse
   / /.container-fluid

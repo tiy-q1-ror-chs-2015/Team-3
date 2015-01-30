@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150130143648) do
-=======
-ActiveRecord::Schema.define(version: 20150130143554) do
->>>>>>> 0aef06fa7699e9afa028a1975ef173ab6df52f45
+ActiveRecord::Schema.define(version: 20150130145046) do
 
   create_table "comments", force: :cascade do |t|
     t.datetime "created_at",                     null: false
@@ -40,6 +36,13 @@ ActiveRecord::Schema.define(version: 20150130143554) do
     t.datetime "updated_at",                 null: false
     t.string   "title",        limit: 255
     t.text     "initial_post", limit: 65535
+  end
+
+  create_table "user_posts", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "post_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "users", force: :cascade do |t|
