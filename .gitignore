@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore schema.rb
+/db/schema.rb
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -16,8 +19,15 @@
 !/log/.keep
 /tmp
 <<<<<<< HEAD
-/db/schema.rb
+<<<<<<< HEAD
+
 =======
 
 db/schema.rb
 >>>>>>> e1ce42bd369e080505635472dc4b1abff80ef402
+=======
+
+=======
+/db/schema.rb
+>>>>>>> 8d1e1977702f503ba406dabeaf6a71882f4ab091
+>>>>>>> 42ee94b964016040ee525c3927940c9ea4fa475e
