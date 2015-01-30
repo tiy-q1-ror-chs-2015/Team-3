@@ -11,20 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150129201227) do
-=======
-ActiveRecord::Schema.define(version: 20150129220813) do
->>>>>>> b929928c5edc8c2bb2d8e23b62145d75b34a8f6d
-=======
-ActiveRecord::Schema.define(version: 20150130001517) do
+ActiveRecord::Schema.define(version: 20150130145046) do
 
   create_table "comments", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
->>>>>>> bcfc7a79a03e05aea1dd6dd324b8a13018fbeaa2
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -39,6 +31,13 @@ ActiveRecord::Schema.define(version: 20150130001517) do
     t.datetime "updated_at",                 null: false
     t.string   "title",        limit: 255
     t.text     "initial_post", limit: 65535
+  end
+
+  create_table "user_posts", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "post_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "users", force: :cascade do |t|
