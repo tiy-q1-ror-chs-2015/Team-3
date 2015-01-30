@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :topics do
-    resources :posts, shallow: true
+    resources :posts
   end
   
   # Example of regular route:

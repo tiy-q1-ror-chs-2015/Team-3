@@ -4,11 +4,18 @@
       %h1 Topics
 .container
   .row
+    - @topics.each do |topic|
+      .col-md-4
+        .list-group-item
+          = link_to topic.title, topic_path(topic)
+          %br
+          = topic.initial_post
+          %br
+          %br
+          %br
+.container
+  .row
     .col-md-12.text-center
-      - @topics.each do |topic|
-        = link_to topic.title, topic_path(topic)
-        %br
-        %br
-        %br
       = link_to "Home", root_path
+      |
       = link_to "Add Topic", new_topic_path
