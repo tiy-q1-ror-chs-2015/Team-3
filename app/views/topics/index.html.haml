@@ -7,7 +7,8 @@
     - @topics.each do |topic|
       .col-md-4
         .list-group-item
-          = link_to topic.title, topic_path(topic)
+          %h3
+            = link_to topic.title, topic_path(topic)
           %br
           = topic.initial_post
           %br
