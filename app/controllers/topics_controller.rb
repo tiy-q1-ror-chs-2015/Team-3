@@ -9,6 +9,8 @@ class TopicsController < ApplicationController
 
 	def create
 		@topic = Topic.create topic_params
+		@topic.user = current_user
+		@topic.save
 		redirect_to topics_path
 	end	
 
