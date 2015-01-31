@@ -17,6 +17,8 @@ class PostsController < ApplicationController
   def create
     @topic = Topic.find params[:topic_id]
     @post = @topic.posts.create post_params
+    @post.user = current_user
+    @post.save
     redirect_to topic_path(@topic)
   end
 
@@ -43,6 +45,8 @@ class PostsController < ApplicationController
     @topic = Topic.find params[:topic_id]
     @post = Post.find params[:id]
     @comment = @post.comments.create comment_params
+    @comment.user = current_user
+    @comment.save
     redirect_to topic_post_path(@topic, @post)
   end
 
@@ -63,6 +67,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(
         :title,
         :content,
+        user_ids: []
+
     )
   end
 end
