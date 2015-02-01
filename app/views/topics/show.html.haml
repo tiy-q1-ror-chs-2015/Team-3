@@ -7,6 +7,9 @@
       %br
       = @topic.initial_post
       %br
+      = @topic.user.email
+      %br
+      = @topic.created_at.strftime("posted at %I:%M%p")
       %br
       = link_to "Edit", edit_topic_path(@topic, @post)
       |
@@ -28,6 +31,8 @@
           = post.content
           %br
           = post.created_at.strftime("posted at %I:%M%p")
+          %br
+          = post.user.email
           %br
           = link_to "Edit", edit_topic_post_path(@topic, post)
           |

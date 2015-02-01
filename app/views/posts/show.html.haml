@@ -7,6 +7,7 @@
       %br
         = @post.content
       %br
+        = @post.user.email
       %br
         = link_to "Edit", edit_topic_post_path(@topic, @post)
         |
@@ -40,6 +41,8 @@
           = comment.content
           %br
           = comment.created_at.strftime("commented at %I:%M%p")
+          %br
+          = comment.user.email
           %br
           = link_to "Delete", destroy_comment_topic_post_path(@post, comment), method: :delete
 
