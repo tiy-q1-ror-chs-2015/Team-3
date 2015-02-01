@@ -27,7 +27,7 @@
           %br
           = post.content
           %br
-          = post.created_at.strftime("posted at %I:%M%p by #{current_user.email}")
+          = post.created_at.strftime("posted at %I:%M%p")
           %br
           = link_to "Edit", edit_topic_post_path(@topic, post)
           |
