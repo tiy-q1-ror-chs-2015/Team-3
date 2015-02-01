@@ -12,8 +12,9 @@
           %br
           = topic.initial_post
           %br
-          = topic.created_at.strftime("created at %I:%M%p by #{current_user.email}")
+          = topic.created_at.strftime("created at %I:%M%p")
           %br
+          = topic.user.email
           %br
 .container
   .row
